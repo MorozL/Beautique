@@ -1,11 +1,14 @@
 ﻿using Beautique.DataAccess.Repository.IRepository;
 using Beautique.DataAcess.Data;
 using Beautique.Models;
+using Beautique.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Beautique.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
