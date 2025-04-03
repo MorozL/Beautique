@@ -117,6 +117,7 @@ namespace Beautique.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
@@ -130,6 +131,11 @@ namespace Beautique.Areas.Identity.Pages.Account
                 user.State = Input.State;
                 user.PostalCode = Input.PostalCode;
                 user.PhoneNumber = Input.PhoneNumber;
+
+                // Оновлений код для хешування пароля
+                var passwordHasher = new PasswordHasher<ApplicationUser>();
+                user.PasswordHash = passwordHasher.HashPassword(user, Input.Password);
+                Console.WriteLine($"Generated Password Hash: {user.PasswordHash}");
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
@@ -149,6 +155,7 @@ namespace Beautique.Areas.Identity.Pages.Account
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return LocalRedirect(returnUrl);
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
