@@ -13,6 +13,7 @@ namespace Beautique.DataAcess.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products{ get; set; }
+        public DbSet<Company> Companies{ get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -176,6 +177,39 @@ namespace Beautique.DataAcess.Data
                     ImageUrl = ""
                 }
                 );
+            modelBuilder.Entity<Company>().HasData(
+                new Company
+                {
+                    Id = 1,
+                    Name = "Glow & Care",
+                    StreetAddress = "123 Beauty Ave",
+                    City = "SkinCare City",
+                    PostalCode = "54321",
+                    State = "CA",
+                    PhoneNumber = "5557778888"
+                },
+                new Company
+                {
+                    Id = 2,
+                    Name = "Nature's Touch",
+                    StreetAddress = "456 Herbal Rd",
+                    City = "GreenVille",
+                    PostalCode = "67890",
+                    State = "OR",
+                    PhoneNumber = "4446669999"
+                },
+                new Company
+                {
+                    Id = 3,
+                    Name = "Silky Locks",
+                    StreetAddress = "789 Hair Blvd",
+                    City = "Shampoo Town",
+                    PostalCode = "11223",
+                    State = "TX",
+                    PhoneNumber = "3335557777"
+                }
+            );
+
         }
     }
 }
