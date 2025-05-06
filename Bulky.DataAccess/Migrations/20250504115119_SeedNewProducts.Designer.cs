@@ -4,6 +4,7 @@ using Beautique.DataAcess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Beautique.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250504115119_SeedNewProducts")]
+    partial class SeedNewProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -500,12 +503,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 33.0,
+                            ListPrice = 58.0,
                             Maker = "GlowHair",
-                            Price = 28.0,
-                            Price100 = 18.0,
-                            Price50 = 23.0,
-                            Title = "ShineElixir"
+                            Price = 53.0,
+                            Price100 = 43.0,
+                            Price50 = 48.0,
+                            Title = "Hair Oil 11"
                         },
                         new
                         {
@@ -514,12 +517,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 58.0,
+                            ListPrice = 46.0,
                             Maker = "BrightEyes",
-                            Price = 53.0,
-                            Price100 = 43.0,
-                            Price50 = 48.0,
-                            Title = "CalmBright"
+                            Price = 41.0,
+                            Price100 = 31.0,
+                            Price50 = 36.0,
+                            Title = "Eye Cream 12"
                         },
                         new
                         {
@@ -528,12 +531,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 50.0,
+                            ListPrice = 24.0,
                             Maker = "CleanSwipe",
-                            Price = 45.0,
-                            Price100 = 35.0,
-                            Price50 = 40.0,
-                            Title = "MicellarWipe"
+                            Price = 19.0,
+                            Price100 = 9.0,
+                            Price50 = 14.0,
+                            Title = "Makeup Remover 13"
                         },
                         new
                         {
@@ -542,12 +545,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 45.0,
+                            ListPrice = 20.0,
                             Maker = "BioCare",
-                            Price = 40.0,
-                            Price100 = 30.0,
-                            Price50 = 35.0,
-                            Title = "BioVital"
+                            Price = 15.0,
+                            Price100 = 5.0,
+                            Price50 = 10.0,
+                            Title = "Organic Lotion 14"
                         },
                         new
                         {
@@ -556,12 +559,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 20.0,
+                            ListPrice = 27.0,
                             Maker = "ShinyLocks",
-                            Price = 15.0,
-                            Price100 = 5.0,
-                            Price50 = 10.0,
-                            Title = "HydraBounce"
+                            Price = 22.0,
+                            Price100 = 12.0,
+                            Price50 = 17.0,
+                            Title = "Shampoo 15"
                         },
                         new
                         {
@@ -570,12 +573,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 36.0,
+                            ListPrice = 35.0,
                             Maker = "AquaFresh",
-                            Price = 31.0,
-                            Price100 = 21.0,
-                            Price50 = 26.0,
-                            Title = "ZenAqua"
+                            Price = 30.0,
+                            Price100 = 20.0,
+                            Price50 = 25.0,
+                            Title = "Body Wash 16"
                         },
                         new
                         {
@@ -584,12 +587,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 23.0,
+                            ListPrice = 54.0,
                             Maker = "DermaGlow",
-                            Price = 18.0,
-                            Price100 = 8.0,
-                            Price50 = 13.0,
-                            Title = "ToneCare"
+                            Price = 49.0,
+                            Price100 = 39.0,
+                            Price50 = 44.0,
+                            Title = "Face Cream 17"
                         },
                         new
                         {
@@ -598,12 +601,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 41.0,
+                            ListPrice = 42.0,
                             Maker = "SmoothCare",
-                            Price = 36.0,
-                            Price100 = 26.0,
-                            Price50 = 31.0,
-                            Title = "SmoothHydra"
+                            Price = 37.0,
+                            Price100 = 27.0,
+                            Price50 = 32.0,
+                            Title = "Body Lotion 18"
                         },
                         new
                         {
@@ -612,12 +615,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 55.0,
+                            ListPrice = 52.0,
                             Maker = "FreshShield",
-                            Price = 50.0,
-                            Price100 = 40.0,
-                            Price50 = 45.0,
-                            Title = "BlockActive"
+                            Price = 47.0,
+                            Price100 = 37.0,
+                            Price50 = 42.0,
+                            Title = "Deodorant 19"
                         },
                         new
                         {
@@ -626,12 +629,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 27.0,
+                            ListPrice = 16.0,
                             Maker = "BladeGuard",
-                            Price = 22.0,
-                            Price100 = 12.0,
-                            Price50 = 17.0,
-                            Title = "BladeSmooth"
+                            Price = 11.0,
+                            Price100 = 1.0,
+                            Price50 = 6.0,
+                            Title = "Shaving Cream 20"
                         },
                         new
                         {
@@ -640,12 +643,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 60.0,
+                            ListPrice = 38.0,
                             Maker = "ColorShine",
-                            Price = 55.0,
-                            Price100 = 45.0,
-                            Price50 = 50.0,
-                            Title = "TintSparkle"
+                            Price = 33.0,
+                            Price100 = 23.0,
+                            Price50 = 28.0,
+                            Title = "Nail Polish 21"
                         },
                         new
                         {
@@ -654,12 +657,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 54.0,
+                            ListPrice = 58.0,
                             Maker = "EssenceMist",
-                            Price = 49.0,
-                            Price100 = 39.0,
-                            Price50 = 44.0,
-                            Title = "AuraMist"
+                            Price = 53.0,
+                            Price100 = 43.0,
+                            Price50 = 48.0,
+                            Title = "Perfume 22"
                         },
                         new
                         {
@@ -668,12 +671,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 58.0,
+                            ListPrice = 17.0,
                             Maker = "LipSilk",
-                            Price = 53.0,
-                            Price100 = 43.0,
-                            Price50 = 48.0,
-                            Title = "SilkSoft"
+                            Price = 12.0,
+                            Price100 = 2.0,
+                            Price50 = 7.0,
+                            Title = "Lip Balm 23"
                         },
                         new
                         {
@@ -682,12 +685,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 47.0,
+                            ListPrice = 54.0,
                             Maker = "PalmSoft",
-                            Price = 42.0,
-                            Price100 = 32.0,
-                            Price50 = 37.0,
-                            Title = "HealCare"
+                            Price = 49.0,
+                            Price100 = 39.0,
+                            Price50 = 44.0,
+                            Title = "Hand Cream 24"
                         },
                         new
                         {
@@ -696,12 +699,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 58.0,
+                            ListPrice = 40.0,
                             Maker = "GlowHair",
-                            Price = 53.0,
-                            Price100 = 43.0,
-                            Price50 = 48.0,
-                            Title = "NourishSilk"
+                            Price = 35.0,
+                            Price100 = 25.0,
+                            Price50 = 30.0,
+                            Title = "Hair Oil 25"
                         },
                         new
                         {
@@ -710,12 +713,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 50.0,
+                            ListPrice = 25.0,
                             Maker = "BrightEyes",
-                            Price = 45.0,
-                            Price100 = 35.0,
-                            Price50 = 40.0,
-                            Title = "FreshEye"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Eye Cream 26"
                         },
                         new
                         {
@@ -724,12 +727,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 57.0,
+                            ListPrice = 44.0,
                             Maker = "CleanSwipe",
-                            Price = 52.0,
-                            Price100 = 42.0,
-                            Price50 = 47.0,
-                            Title = "WashMicellar"
+                            Price = 39.0,
+                            Price100 = 29.0,
+                            Price50 = 34.0,
+                            Title = "Makeup Remover 27"
                         },
                         new
                         {
@@ -738,12 +741,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 53.0,
+                            ListPrice = 18.0,
                             Maker = "BioCare",
-                            Price = 48.0,
-                            Price100 = 38.0,
-                            Price50 = 43.0,
-                            Title = "HerbalOrganic"
+                            Price = 13.0,
+                            Price100 = 3.0,
+                            Price50 = 8.0,
+                            Title = "Organic Lotion 28"
                         },
                         new
                         {
@@ -752,12 +755,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 61.0,
+                            ListPrice = 37.0,
                             Maker = "ShinyLocks",
-                            Price = 56.0,
-                            Price100 = 46.0,
-                            Price50 = 51.0,
-                            Title = "SmoothGlow"
+                            Price = 32.0,
+                            Price100 = 22.0,
+                            Price50 = 27.0,
+                            Title = "Shampoo 29"
                         },
                         new
                         {
@@ -766,12 +769,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 36.0,
+                            ListPrice = 45.0,
                             Maker = "AquaFresh",
-                            Price = 31.0,
-                            Price100 = 21.0,
-                            Price50 = 26.0,
-                            Title = "PureCleanse"
+                            Price = 40.0,
+                            Price100 = 30.0,
+                            Price50 = 35.0,
+                            Title = "Body Wash 30"
                         },
                         new
                         {
@@ -780,12 +783,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 25.0,
+                            ListPrice = 30.0,
                             Maker = "DermaGlow",
-                            Price = 20.0,
-                            Price100 = 10.0,
-                            Price50 = 15.0,
-                            Title = "ToneBalance"
+                            Price = 25.0,
+                            Price100 = 15.0,
+                            Price50 = 20.0,
+                            Title = "Face Cream 31"
                         },
                         new
                         {
@@ -794,12 +797,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 61.0,
+                            ListPrice = 49.0,
                             Maker = "SmoothCare",
-                            Price = 56.0,
-                            Price100 = 46.0,
-                            Price50 = 51.0,
-                            Title = "HydraSilk"
+                            Price = 44.0,
+                            Price100 = 34.0,
+                            Price50 = 39.0,
+                            Title = "Body Lotion 32"
                         },
                         new
                         {
@@ -808,12 +811,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 43.0,
+                            ListPrice = 27.0,
                             Maker = "FreshShield",
-                            Price = 38.0,
-                            Price100 = 28.0,
-                            Price50 = 33.0,
-                            Title = "BlockPower"
+                            Price = 22.0,
+                            Price100 = 12.0,
+                            Price50 = 17.0,
+                            Title = "Deodorant 33"
                         },
                         new
                         {
@@ -822,12 +825,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 49.0,
+                            ListPrice = 59.0,
                             Maker = "BladeGuard",
-                            Price = 44.0,
-                            Price100 = 34.0,
-                            Price50 = 39.0,
-                            Title = "FreshCalm"
+                            Price = 54.0,
+                            Price100 = 44.0,
+                            Price50 = 49.0,
+                            Title = "Shaving Cream 34"
                         },
                         new
                         {
@@ -836,12 +839,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 23.0,
+                            ListPrice = 54.0,
                             Maker = "ColorShine",
-                            Price = 18.0,
-                            Price100 = 8.0,
-                            Price50 = 13.0,
-                            Title = "PopTint"
+                            Price = 49.0,
+                            Price100 = 39.0,
+                            Price50 = 44.0,
+                            Title = "Nail Polish 35"
                         },
                         new
                         {
@@ -850,12 +853,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 31.0,
+                            ListPrice = 17.0,
                             Maker = "EssenceMist",
-                            Price = 26.0,
-                            Price100 = 16.0,
-                            Price50 = 21.0,
-                            Title = "MistDream"
+                            Price = 12.0,
+                            Price100 = 2.0,
+                            Price50 = 7.0,
+                            Title = "Perfume 36"
                         },
                         new
                         {
@@ -864,12 +867,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 42.0,
+                            ListPrice = 19.0,
                             Maker = "LipSilk",
-                            Price = 37.0,
-                            Price100 = 27.0,
-                            Price50 = 32.0,
-                            Title = "SilkSmooth"
+                            Price = 14.0,
+                            Price100 = 4.0,
+                            Price50 = 9.0,
+                            Title = "Lip Balm 37"
                         },
                         new
                         {
@@ -878,12 +881,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 25.0,
+                            ListPrice = 34.0,
                             Maker = "PalmSoft",
-                            Price = 20.0,
-                            Price100 = 10.0,
-                            Price50 = 15.0,
-                            Title = "CalmShield"
+                            Price = 29.0,
+                            Price100 = 19.0,
+                            Price50 = 24.0,
+                            Title = "Hand Cream 38"
                         },
                         new
                         {
@@ -892,12 +895,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 56.0,
+                            ListPrice = 30.0,
                             Maker = "GlowHair",
-                            Price = 51.0,
-                            Price100 = 41.0,
-                            Price50 = 46.0,
-                            Title = "ShineCare"
+                            Price = 25.0,
+                            Price100 = 15.0,
+                            Price50 = 20.0,
+                            Title = "Hair Oil 39"
                         },
                         new
                         {
@@ -906,12 +909,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 54.0,
+                            ListPrice = 37.0,
                             Maker = "BrightEyes",
-                            Price = 49.0,
-                            Price100 = 39.0,
-                            Price50 = 44.0,
-                            Title = "LuxeEye"
+                            Price = 32.0,
+                            Price100 = 22.0,
+                            Price50 = 27.0,
+                            Title = "Eye Cream 40"
                         },
                         new
                         {
@@ -920,12 +923,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 53.0,
+                            ListPrice = 25.0,
                             Maker = "CleanSwipe",
-                            Price = 48.0,
-                            Price100 = 38.0,
-                            Price50 = 43.0,
-                            Title = "FoamWash"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Makeup Remover 41"
                         },
                         new
                         {
@@ -934,12 +937,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 58.0,
+                            ListPrice = 43.0,
                             Maker = "BioCare",
-                            Price = 53.0,
-                            Price100 = 43.0,
-                            Price50 = 48.0,
-                            Title = "BioOrganic"
+                            Price = 38.0,
+                            Price100 = 28.0,
+                            Price50 = 33.0,
+                            Title = "Organic Lotion 42"
                         },
                         new
                         {
@@ -948,12 +951,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 60.0,
+                            ListPrice = 52.0,
                             Maker = "ShinyLocks",
-                            Price = 55.0,
-                            Price100 = 45.0,
-                            Price50 = 50.0,
-                            Title = "SilkBounce"
+                            Price = 47.0,
+                            Price100 = 37.0,
+                            Price50 = 42.0,
+                            Title = "Shampoo 43"
                         },
                         new
                         {
@@ -962,12 +965,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 51.0,
+                            ListPrice = 19.0,
                             Maker = "AquaFresh",
-                            Price = 46.0,
-                            Price100 = 36.0,
-                            Price50 = 41.0,
-                            Title = "PureBloom"
+                            Price = 14.0,
+                            Price100 = 4.0,
+                            Price50 = 9.0,
+                            Title = "Body Wash 44"
                         },
                         new
                         {
@@ -976,12 +979,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 30.0,
+                            ListPrice = 57.0,
                             Maker = "DermaGlow",
-                            Price = 25.0,
-                            Price100 = 15.0,
-                            Price50 = 20.0,
-                            Title = "FreshBalance"
+                            Price = 52.0,
+                            Price100 = 42.0,
+                            Price50 = 47.0,
+                            Title = "Face Cream 45"
                         },
                         new
                         {
@@ -990,12 +993,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 35.0,
+                            ListPrice = 29.0,
                             Maker = "SmoothCare",
-                            Price = 30.0,
-                            Price100 = 20.0,
-                            Price50 = 25.0,
-                            Title = "TouchSmooth"
+                            Price = 24.0,
+                            Price100 = 14.0,
+                            Price50 = 19.0,
+                            Title = "Body Lotion 46"
                         },
                         new
                         {
@@ -1004,12 +1007,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 27.0,
+                            ListPrice = 52.0,
                             Maker = "FreshShield",
-                            Price = 22.0,
-                            Price100 = 12.0,
-                            Price50 = 17.0,
-                            Title = "GuardZone"
+                            Price = 47.0,
+                            Price100 = 37.0,
+                            Price50 = 42.0,
+                            Title = "Deodorant 47"
                         },
                         new
                         {
@@ -1018,12 +1021,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 51.0,
+                            ListPrice = 15.0,
                             Maker = "BladeGuard",
-                            Price = 46.0,
-                            Price100 = 36.0,
-                            Price50 = 41.0,
-                            Title = "FoamSmooth"
+                            Price = 10.0,
+                            Price100 = 1.0,
+                            Price50 = 5.0,
+                            Title = "Shaving Cream 48"
                         },
                         new
                         {
@@ -1032,12 +1035,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 65.0,
+                            ListPrice = 35.0,
                             Maker = "ColorShine",
-                            Price = 60.0,
-                            Price100 = 50.0,
-                            Price50 = 55.0,
-                            Title = "TintGlam"
+                            Price = 30.0,
+                            Price100 = 20.0,
+                            Price50 = 25.0,
+                            Title = "Nail Polish 49"
                         },
                         new
                         {
@@ -1046,12 +1049,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 27.0,
+                            ListPrice = 52.0,
                             Maker = "EssenceMist",
-                            Price = 22.0,
-                            Price100 = 12.0,
-                            Price50 = 17.0,
-                            Title = "DreamBloom"
+                            Price = 47.0,
+                            Price100 = 37.0,
+                            Price50 = 42.0,
+                            Title = "Perfume 50"
                         },
                         new
                         {
@@ -1060,12 +1063,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 51.0,
+                            ListPrice = 40.0,
                             Maker = "LipSilk",
-                            Price = 46.0,
-                            Price100 = 36.0,
-                            Price50 = 41.0,
-                            Title = "SoftSilk"
+                            Price = 35.0,
+                            Price100 = 25.0,
+                            Price50 = 30.0,
+                            Title = "Lip Balm 51"
                         },
                         new
                         {
@@ -1074,12 +1077,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 54.0,
+                            ListPrice = 58.0,
                             Maker = "PalmSoft",
-                            Price = 49.0,
-                            Price100 = 39.0,
-                            Price50 = 44.0,
-                            Title = "RepairCalm"
+                            Price = 53.0,
+                            Price100 = 43.0,
+                            Price50 = 48.0,
+                            Title = "Hand Cream 52"
                         },
                         new
                         {
@@ -1088,12 +1091,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 42.0,
+                            ListPrice = 54.0,
                             Maker = "GlowHair",
-                            Price = 37.0,
-                            Price100 = 27.0,
-                            Price50 = 32.0,
-                            Title = "OilCare"
+                            Price = 49.0,
+                            Price100 = 39.0,
+                            Price50 = 44.0,
+                            Title = "Hair Oil 53"
                         },
                         new
                         {
@@ -1102,12 +1105,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 23.0,
+                            ListPrice = 15.0,
                             Maker = "BrightEyes",
-                            Price = 18.0,
-                            Price100 = 8.0,
-                            Price50 = 13.0,
-                            Title = "CalmLuxe"
+                            Price = 10.0,
+                            Price100 = 1.0,
+                            Price50 = 5.0,
+                            Title = "Eye Cream 54"
                         },
                         new
                         {
@@ -1116,12 +1119,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 54.0,
+                            ListPrice = 43.0,
                             Maker = "CleanSwipe",
-                            Price = 49.0,
-                            Price100 = 39.0,
-                            Price50 = 44.0,
-                            Title = "MicellarClean"
+                            Price = 38.0,
+                            Price100 = 28.0,
+                            Price50 = 33.0,
+                            Title = "Makeup Remover 55"
                         },
                         new
                         {
@@ -1130,12 +1133,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 52.0,
+                            ListPrice = 65.0,
                             Maker = "BioCare",
-                            Price = 47.0,
-                            Price100 = 37.0,
-                            Price50 = 42.0,
-                            Title = "NatureGreen"
+                            Price = 60.0,
+                            Price100 = 50.0,
+                            Price50 = 55.0,
+                            Title = "Organic Lotion 56"
                         },
                         new
                         {
@@ -1144,12 +1147,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 62.0,
+                            ListPrice = 65.0,
                             Maker = "ShinyLocks",
-                            Price = 57.0,
-                            Price100 = 47.0,
-                            Price50 = 52.0,
-                            Title = "ShineSilk"
+                            Price = 60.0,
+                            Price100 = 50.0,
+                            Price50 = 55.0,
+                            Title = "Shampoo 57"
                         },
                         new
                         {
@@ -1158,12 +1161,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 17.0,
+                            ListPrice = 25.0,
                             Maker = "AquaFresh",
-                            Price = 12.0,
-                            Price100 = 2.0,
-                            Price50 = 7.0,
-                            Title = "BloomFoam"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Body Wash 58"
                         },
                         new
                         {
@@ -1172,12 +1175,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 47.0,
+                            ListPrice = 58.0,
                             Maker = "DermaGlow",
-                            Price = 42.0,
-                            Price100 = 32.0,
-                            Price50 = 37.0,
-                            Title = "VelvetGlow"
+                            Price = 53.0,
+                            Price100 = 43.0,
+                            Price50 = 48.0,
+                            Title = "Face Cream 59"
                         },
                         new
                         {
@@ -1186,12 +1189,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 53.0,
+                            ListPrice = 21.0,
                             Maker = "SmoothCare",
-                            Price = 48.0,
-                            Price100 = 38.0,
-                            Price50 = 43.0,
-                            Title = "ButterSilk"
+                            Price = 16.0,
+                            Price100 = 6.0,
+                            Price50 = 11.0,
+                            Title = "Body Lotion 60"
                         },
                         new
                         {
@@ -1200,12 +1203,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 43.0,
+                            ListPrice = 27.0,
                             Maker = "FreshShield",
-                            Price = 38.0,
-                            Price100 = 28.0,
-                            Price50 = 33.0,
-                            Title = "FreshShield"
+                            Price = 22.0,
+                            Price100 = 12.0,
+                            Price50 = 17.0,
+                            Title = "Deodorant 61"
                         },
                         new
                         {
@@ -1214,12 +1217,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 53.0,
+                            ListPrice = 62.0,
                             Maker = "BladeGuard",
-                            Price = 48.0,
-                            Price100 = 38.0,
-                            Price50 = 43.0,
-                            Title = "SmoothCalm"
+                            Price = 57.0,
+                            Price100 = 47.0,
+                            Price50 = 52.0,
+                            Title = "Shaving Cream 62"
                         },
                         new
                         {
@@ -1228,12 +1231,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 42.0,
+                            ListPrice = 51.0,
                             Maker = "ColorShine",
-                            Price = 37.0,
-                            Price100 = 27.0,
-                            Price50 = 32.0,
-                            Title = "GlamTint"
+                            Price = 46.0,
+                            Price100 = 36.0,
+                            Price50 = 41.0,
+                            Title = "Nail Polish 63"
                         },
                         new
                         {
@@ -1242,12 +1245,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 62.0,
+                            ListPrice = 36.0,
                             Maker = "EssenceMist",
-                            Price = 57.0,
-                            Price100 = 47.0,
-                            Price50 = 52.0,
-                            Title = "EssenceAura"
+                            Price = 31.0,
+                            Price100 = 21.0,
+                            Price50 = 26.0,
+                            Title = "Perfume 64"
                         },
                         new
                         {
@@ -1256,12 +1259,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 30.0,
+                            ListPrice = 39.0,
                             Maker = "LipSilk",
-                            Price = 25.0,
-                            Price100 = 15.0,
-                            Price50 = 20.0,
-                            Title = "GlowSilk"
+                            Price = 34.0,
+                            Price100 = 24.0,
+                            Price50 = 29.0,
+                            Title = "Lip Balm 65"
                         },
                         new
                         {
@@ -1270,12 +1273,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 19.0,
+                            ListPrice = 51.0,
                             Maker = "PalmSoft",
-                            Price = 14.0,
-                            Price100 = 4.0,
-                            Price50 = 9.0,
-                            Title = "CareGuard"
+                            Price = 46.0,
+                            Price100 = 36.0,
+                            Price50 = 41.0,
+                            Title = "Hand Cream 66"
                         },
                         new
                         {
@@ -1284,12 +1287,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 19.0,
+                            ListPrice = 54.0,
                             Maker = "GlowHair",
-                            Price = 14.0,
-                            Price100 = 4.0,
-                            Price50 = 9.0,
-                            Title = "ElixirSilk"
+                            Price = 49.0,
+                            Price100 = 39.0,
+                            Price50 = 44.0,
+                            Title = "Hair Oil 67"
                         },
                         new
                         {
@@ -1298,12 +1301,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 21.0,
+                            ListPrice = 41.0,
                             Maker = "BrightEyes",
-                            Price = 16.0,
-                            Price100 = 6.0,
-                            Price50 = 11.0,
-                            Title = "GlowBright"
+                            Price = 36.0,
+                            Price100 = 26.0,
+                            Price50 = 31.0,
+                            Title = "Eye Cream 68"
                         },
                         new
                         {
@@ -1312,12 +1315,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 48.0,
+                            ListPrice = 53.0,
                             Maker = "CleanSwipe",
-                            Price = 43.0,
-                            Price100 = 33.0,
-                            Price50 = 38.0,
-                            Title = "WashFoam"
+                            Price = 48.0,
+                            Price100 = 38.0,
+                            Price50 = 43.0,
+                            Title = "Makeup Remover 69"
                         },
                         new
                         {
@@ -1326,12 +1329,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 23.0,
+                            ListPrice = 25.0,
                             Maker = "BioCare",
-                            Price = 18.0,
-                            Price100 = 8.0,
-                            Price50 = 13.0,
-                            Title = "PureBio"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Organic Lotion 70"
                         },
                         new
                         {
@@ -1340,12 +1343,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 30.0,
+                            ListPrice = 16.0,
                             Maker = "ShinyLocks",
-                            Price = 25.0,
-                            Price100 = 15.0,
-                            Price50 = 20.0,
-                            Title = "LusterHydra"
+                            Price = 11.0,
+                            Price100 = 1.0,
+                            Price50 = 6.0,
+                            Title = "Shampoo 71"
                         },
                         new
                         {
@@ -1354,12 +1357,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 46.0,
+                            ListPrice = 48.0,
                             Maker = "AquaFresh",
-                            Price = 41.0,
-                            Price100 = 31.0,
-                            Price50 = 36.0,
-                            Title = "BloomWave"
+                            Price = 43.0,
+                            Price100 = 33.0,
+                            Price50 = 38.0,
+                            Title = "Body Wash 72"
                         },
                         new
                         {
@@ -1368,12 +1371,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 35.0,
+                            ListPrice = 17.0,
                             Maker = "DermaGlow",
-                            Price = 30.0,
-                            Price100 = 20.0,
-                            Price50 = 25.0,
-                            Title = "VelvetTone"
+                            Price = 12.0,
+                            Price100 = 2.0,
+                            Price50 = 7.0,
+                            Title = "Face Cream 73"
                         },
                         new
                         {
@@ -1382,12 +1385,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 25.0,
+                            ListPrice = 62.0,
                             Maker = "SmoothCare",
-                            Price = 20.0,
-                            Price100 = 10.0,
-                            Price50 = 15.0,
-                            Title = "TouchSilk"
+                            Price = 57.0,
+                            Price100 = 47.0,
+                            Price50 = 52.0,
+                            Title = "Body Lotion 74"
                         },
                         new
                         {
@@ -1396,12 +1399,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 16.0,
+                            ListPrice = 19.0,
                             Maker = "FreshShield",
-                            Price = 11.0,
-                            Price100 = 1.0,
-                            Price50 = 6.0,
-                            Title = "GuardPower"
+                            Price = 14.0,
+                            Price100 = 4.0,
+                            Price50 = 9.0,
+                            Title = "Deodorant 75"
                         },
                         new
                         {
@@ -1410,12 +1413,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 52.0,
+                            ListPrice = 29.0,
                             Maker = "BladeGuard",
-                            Price = 47.0,
-                            Price100 = 37.0,
-                            Price50 = 42.0,
-                            Title = "EdgeFoam"
+                            Price = 24.0,
+                            Price100 = 14.0,
+                            Price50 = 19.0,
+                            Title = "Shaving Cream 76"
                         },
                         new
                         {
@@ -1424,12 +1427,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 27.0,
+                            ListPrice = 30.0,
                             Maker = "ColorShine",
-                            Price = 22.0,
-                            Price100 = 12.0,
-                            Price50 = 17.0,
-                            Title = "TintGloss"
+                            Price = 25.0,
+                            Price100 = 15.0,
+                            Price50 = 20.0,
+                            Title = "Nail Polish 77"
                         },
                         new
                         {
@@ -1438,12 +1441,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 59.0,
+                            ListPrice = 24.0,
                             Maker = "EssenceMist",
-                            Price = 54.0,
-                            Price100 = 44.0,
-                            Price50 = 49.0,
-                            Title = "ScentBloom"
+                            Price = 19.0,
+                            Price100 = 9.0,
+                            Price50 = 14.0,
+                            Title = "Perfume 78"
                         },
                         new
                         {
@@ -1452,12 +1455,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 22.0,
+                            ListPrice = 34.0,
                             Maker = "LipSilk",
-                            Price = 17.0,
-                            Price100 = 7.0,
-                            Price50 = 12.0,
-                            Title = "HydraGlow"
+                            Price = 29.0,
+                            Price100 = 19.0,
+                            Price50 = 24.0,
+                            Title = "Lip Balm 79"
                         },
                         new
                         {
@@ -1466,12 +1469,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 17.0,
+                            ListPrice = 41.0,
                             Maker = "PalmSoft",
-                            Price = 12.0,
-                            Price100 = 2.0,
-                            Price50 = 7.0,
-                            Title = "VelvetSoft"
+                            Price = 36.0,
+                            Price100 = 26.0,
+                            Price50 = 31.0,
+                            Title = "Hand Cream 80"
                         },
                         new
                         {
@@ -1480,12 +1483,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 47.0,
+                            ListPrice = 42.0,
                             Maker = "GlowHair",
-                            Price = 42.0,
-                            Price100 = 32.0,
-                            Price50 = 37.0,
-                            Title = "OilSilk"
+                            Price = 37.0,
+                            Price100 = 27.0,
+                            Price50 = 32.0,
+                            Title = "Hair Oil 81"
                         },
                         new
                         {
@@ -1494,12 +1497,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 42.0,
+                            ListPrice = 43.0,
                             Maker = "BrightEyes",
-                            Price = 37.0,
-                            Price100 = 27.0,
-                            Price50 = 32.0,
-                            Title = "CalmLift"
+                            Price = 38.0,
+                            Price100 = 28.0,
+                            Price50 = 33.0,
+                            Title = "Eye Cream 82"
                         },
                         new
                         {
@@ -1508,12 +1511,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 16.0,
+                            ListPrice = 25.0,
                             Maker = "CleanSwipe",
-                            Price = 11.0,
-                            Price100 = 1.0,
-                            Price50 = 6.0,
-                            Title = "CleanMicellar"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Makeup Remover 83"
                         },
                         new
                         {
@@ -1522,12 +1525,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 49.0,
+                            ListPrice = 24.0,
                             Maker = "BioCare",
-                            Price = 44.0,
-                            Price100 = 34.0,
-                            Price50 = 39.0,
-                            Title = "OrganicBio"
+                            Price = 19.0,
+                            Price100 = 9.0,
+                            Price50 = 14.0,
+                            Title = "Organic Lotion 84"
                         },
                         new
                         {
@@ -1536,12 +1539,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 62.0,
+                            ListPrice = 42.0,
                             Maker = "ShinyLocks",
-                            Price = 57.0,
-                            Price100 = 47.0,
-                            Price50 = 52.0,
-                            Title = "FreshSilk"
+                            Price = 37.0,
+                            Price100 = 27.0,
+                            Price50 = 32.0,
+                            Title = "Shampoo 85"
                         },
                         new
                         {
@@ -1550,12 +1553,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 49.0,
+                            ListPrice = 32.0,
                             Maker = "AquaFresh",
-                            Price = 44.0,
-                            Price100 = 34.0,
-                            Price50 = 39.0,
-                            Title = "CleanseMist"
+                            Price = 27.0,
+                            Price100 = 17.0,
+                            Price50 = 22.0,
+                            Title = "Body Wash 86"
                         },
                         new
                         {
@@ -1564,12 +1567,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "A facial cream enriched with vitamins.",
                             ImageUrl = "",
-                            ListPrice = 37.0,
+                            ListPrice = 59.0,
                             Maker = "DermaGlow",
-                            Price = 32.0,
-                            Price100 = 22.0,
-                            Price50 = 27.0,
-                            Title = "FreshSoft"
+                            Price = 54.0,
+                            Price100 = 44.0,
+                            Price50 = 49.0,
+                            Title = "Face Cream 87"
                         },
                         new
                         {
@@ -1578,12 +1581,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 4,
                             Description = "A hydrating lotion for silky skin.",
                             ImageUrl = "",
-                            ListPrice = 19.0,
+                            ListPrice = 24.0,
                             Maker = "SmoothCare",
-                            Price = 14.0,
-                            Price100 = 4.0,
-                            Price50 = 9.0,
-                            Title = "EssenceHydra"
+                            Price = 19.0,
+                            Price100 = 9.0,
+                            Price50 = 14.0,
+                            Title = "Body Lotion 88"
                         },
                         new
                         {
@@ -1592,12 +1595,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 5,
                             Description = "A long-lasting deodorant for active days.",
                             ImageUrl = "",
-                            ListPrice = 37.0,
+                            ListPrice = 20.0,
                             Maker = "FreshShield",
-                            Price = 32.0,
-                            Price100 = 22.0,
-                            Price50 = 27.0,
-                            Title = "ZonePower"
+                            Price = 15.0,
+                            Price100 = 5.0,
+                            Price50 = 10.0,
+                            Title = "Deodorant 89"
                         },
                         new
                         {
@@ -1606,12 +1609,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 6,
                             Description = "A rich shaving cream for sensitive skin.",
                             ImageUrl = "",
-                            ListPrice = 50.0,
+                            ListPrice = 47.0,
                             Maker = "BladeGuard",
-                            Price = 45.0,
-                            Price100 = 35.0,
-                            Price50 = 40.0,
-                            Title = "BladeEdge"
+                            Price = 42.0,
+                            Price100 = 32.0,
+                            Price50 = 37.0,
+                            Title = "Shaving Cream 90"
                         },
                         new
                         {
@@ -1620,12 +1623,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 7,
                             Description = "Bright nail polish with lasting power.",
                             ImageUrl = "",
-                            ListPrice = 36.0,
+                            ListPrice = 37.0,
                             Maker = "ColorShine",
-                            Price = 31.0,
-                            Price100 = 21.0,
-                            Price50 = 26.0,
-                            Title = "PopColor"
+                            Price = 32.0,
+                            Price100 = 22.0,
+                            Price50 = 27.0,
+                            Title = "Nail Polish 91"
                         },
                         new
                         {
@@ -1634,12 +1637,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 8,
                             Description = "A light perfume with floral notes.",
                             ImageUrl = "",
-                            ListPrice = 60.0,
+                            ListPrice = 22.0,
                             Maker = "EssenceMist",
-                            Price = 55.0,
-                            Price100 = 45.0,
-                            Price50 = 50.0,
-                            Title = "BloomAura"
+                            Price = 17.0,
+                            Price100 = 7.0,
+                            Price50 = 12.0,
+                            Title = "Perfume 92"
                         },
                         new
                         {
@@ -1648,12 +1651,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 9,
                             Description = "A soothing balm for chapped lips.",
                             ImageUrl = "",
-                            ListPrice = 30.0,
+                            ListPrice = 42.0,
                             Maker = "LipSilk",
-                            Price = 25.0,
-                            Price100 = 15.0,
-                            Price50 = 20.0,
-                            Title = "BalmCare"
+                            Price = 37.0,
+                            Price100 = 27.0,
+                            Price50 = 32.0,
+                            Title = "Lip Balm 93"
                         },
                         new
                         {
@@ -1662,12 +1665,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 10,
                             Description = "A cream to restore dry hands.",
                             ImageUrl = "",
-                            ListPrice = 58.0,
+                            ListPrice = 16.0,
                             Maker = "PalmSoft",
-                            Price = 53.0,
-                            Price100 = 43.0,
-                            Price50 = 48.0,
-                            Title = "CareHeal"
+                            Price = 11.0,
+                            Price100 = 1.0,
+                            Price50 = 6.0,
+                            Title = "Hand Cream 94"
                         },
                         new
                         {
@@ -1676,12 +1679,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 11,
                             Description = "A nourishing oil for damaged hair.",
                             ImageUrl = "",
-                            ListPrice = 16.0,
+                            ListPrice = 58.0,
                             Maker = "GlowHair",
-                            Price = 11.0,
-                            Price100 = 1.0,
-                            Price50 = 6.0,
-                            Title = "DropNourish"
+                            Price = 53.0,
+                            Price100 = 43.0,
+                            Price50 = 48.0,
+                            Title = "Hair Oil 95"
                         },
                         new
                         {
@@ -1690,12 +1693,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 12,
                             Description = "Targets dark circles and fine lines.",
                             ImageUrl = "",
-                            ListPrice = 27.0,
+                            ListPrice = 25.0,
                             Maker = "BrightEyes",
-                            Price = 22.0,
-                            Price100 = 12.0,
-                            Price50 = 17.0,
-                            Title = "LiftSoft"
+                            Price = 20.0,
+                            Price100 = 10.0,
+                            Price50 = 15.0,
+                            Title = "Eye Cream 96"
                         },
                         new
                         {
@@ -1704,12 +1707,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 13,
                             Description = "A gentle remover for all makeup types.",
                             ImageUrl = "",
-                            ListPrice = 53.0,
+                            ListPrice = 60.0,
                             Maker = "CleanSwipe",
-                            Price = 48.0,
-                            Price100 = 38.0,
-                            Price50 = 43.0,
-                            Title = "CleanWash"
+                            Price = 55.0,
+                            Price100 = 45.0,
+                            Price50 = 50.0,
+                            Title = "Makeup Remover 97"
                         },
                         new
                         {
@@ -1718,12 +1721,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 14,
                             Description = "An organic skin lotion with no parabens.",
                             ImageUrl = "",
-                            ListPrice = 63.0,
+                            ListPrice = 38.0,
                             Maker = "BioCare",
-                            Price = 58.0,
-                            Price100 = 48.0,
-                            Price50 = 53.0,
-                            Title = "HerbalNature"
+                            Price = 33.0,
+                            Price100 = 23.0,
+                            Price50 = 28.0,
+                            Title = "Organic Lotion 98"
                         },
                         new
                         {
@@ -1732,12 +1735,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "A revitalizing shampoo for daily use.",
                             ImageUrl = "",
-                            ListPrice = 52.0,
+                            ListPrice = 22.0,
                             Maker = "ShinyLocks",
-                            Price = 47.0,
-                            Price100 = 37.0,
-                            Price50 = 42.0,
-                            Title = "FreshSmooth"
+                            Price = 17.0,
+                            Price100 = 7.0,
+                            Price50 = 12.0,
+                            Title = "Shampoo 99"
                         },
                         new
                         {
@@ -1746,12 +1749,12 @@ namespace Beautique.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "A moisturizing body wash with essential oils.",
                             ImageUrl = "",
-                            ListPrice = 23.0,
+                            ListPrice = 30.0,
                             Maker = "AquaFresh",
-                            Price = 18.0,
-                            Price100 = 8.0,
-                            Price50 = 13.0,
-                            Title = "ZenWave"
+                            Price = 25.0,
+                            Price100 = 15.0,
+                            Price50 = 20.0,
+                            Title = "Body Wash 100"
                         });
                 });
 

@@ -18,7 +18,7 @@ namespace Beautique.Models
         public string Title { get; set; }
         public string Description { get; set; }
         [Required]
-        public string ISBN { get; set; }
+        public string BarCode { get; set; }
         [Required]
         public string Maker { get; set; }
         [Required]

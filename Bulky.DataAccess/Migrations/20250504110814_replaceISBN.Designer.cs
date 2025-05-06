@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Beautique.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250328180936_addIdentityTables")]
-    partial class addIdentityTables
+    [Migration("20250504110814_replaceISBN")]
+    partial class replaceISBN
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -132,6 +132,180 @@ namespace Beautique.DataAccess.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Beautique.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId");
+
+                    b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "SkinCare City",
+                            Name = "Glow & Care",
+                            PhoneNumber = "5557778888",
+                            PostalCode = "54321",
+                            State = "CA",
+                            StreetAddress = "123 Beauty Ave"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "GreenVille",
+                            Name = "Nature's Touch",
+                            PhoneNumber = "4446669999",
+                            PostalCode = "67890",
+                            State = "OR",
+                            StreetAddress = "456 Herbal Rd"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "Shampoo Town",
+                            Name = "Silky Locks",
+                            PhoneNumber = "3335557777",
+                            PostalCode = "11223",
+                            State = "TX",
+                            StreetAddress = "789 Hair Blvd"
+                        });
+                });
+
+            modelBuilder.Entity("Beautique.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderHeaderId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderHeaderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetails");
+                });
+
+            modelBuilder.Entity("Beautique.Models.OrderHeader", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Carrier")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("OrderTotal")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateOnly>("PaymentDueDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("PaymentIntentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SessionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ShippingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrackingNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("OrderHeaders");
+                });
+
             modelBuilder.Entity("Beautique.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -140,14 +314,14 @@ namespace Beautique.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("BarCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BarCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -185,9 +359,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 1,
+                            BarCode = "SW123456789",
                             CategoryId = 1,
                             Description = "A premium shampoo that provides ultimate shine and smoothness.",
-                            BarCode = "SW123456789",
                             ImageUrl = "",
                             ListPrice = 55.0,
                             Maker = "SparkLife",
@@ -199,9 +373,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 2,
+                            BarCode = "PG987654321",
                             CategoryId = 2,
                             Description = "A gentle body wash that leaves your skin refreshed and hydrated.",
-                            BarCode = "PG987654321",
                             ImageUrl = "",
                             ListPrice = 40.0,
                             Maker = "CleanseCo",
@@ -213,9 +387,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 3,
+                            BarCode = "ST111223344",
                             CategoryId = 3,
                             Description = "A soft and nourishing facial cream for smooth and glowing skin.",
-                            BarCode = "ST111223344",
                             ImageUrl = "",
                             ListPrice = 65.0,
                             Maker = "VelvetSkin",
@@ -227,9 +401,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 4,
+                            BarCode = "CS554433221",
                             CategoryId = 5,
                             Description = "A refreshing deodorant spray that keeps you fresh all day long.",
-                            BarCode = "CS554433221",
                             ImageUrl = "",
                             ListPrice = 20.0,
                             Maker = "LushCare",
@@ -241,9 +415,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 5,
+                            BarCode = "FC998877665",
                             CategoryId = 6,
                             Description = "A shaving gel that provides a smooth and irritation-free shave.",
-                            BarCode = "FC998877665",
                             ImageUrl = "",
                             ListPrice = 35.0,
                             Maker = "SharpEdge",
@@ -255,9 +429,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 6,
+                            BarCode = "GN332211445",
                             CategoryId = 7,
                             Description = "A long-lasting nail polish with vibrant colors and a glossy finish.",
-                            BarCode = "GN332211445",
                             ImageUrl = "",
                             ListPrice = 15.0,
                             Maker = "NailArt",
@@ -269,9 +443,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 7,
+                            BarCode = "EV776655443",
                             CategoryId = 8,
                             Description = "A fresh and uplifting fragrance that is perfect for daily wear.",
-                            BarCode = "EV776655443",
                             ImageUrl = "",
                             ListPrice = 50.0,
                             Maker = "ScentAura",
@@ -283,9 +457,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 8,
+                            BarCode = "SK223344556",
                             CategoryId = 9,
                             Description = "A hydrating lip balm with a smooth texture and subtle scent.",
-                            BarCode = "SK223344556",
                             ImageUrl = "",
                             ListPrice = 10.0,
                             Maker = "LipsCare",
@@ -297,9 +471,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 9,
+                            BarCode = "HH556677889",
                             CategoryId = 10,
                             Description = "A nourishing hand cream that keeps your skin soft and hydrated.",
-                            BarCode = "HH556677889",
                             ImageUrl = "",
                             ListPrice = 18.0,
                             Maker = "SkinGuard",
@@ -311,9 +485,9 @@ namespace Beautique.DataAccess.Migrations
                         new
                         {
                             Id = 10,
+                            BarCode = "EL998877665",
                             CategoryId = 12,
                             Description = "A rejuvenating eye cream that targets puffiness and dark circles.",
-                            BarCode = "EL998877665",
                             ImageUrl = "",
                             ListPrice = 45.0,
                             Maker = "VisionGlow",
@@ -322,6 +496,33 @@ namespace Beautique.DataAccess.Migrations
                             Price50 = 35.0,
                             Title = "EyeLuxe"
                         });
+                });
+
+            modelBuilder.Entity("Beautique.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -388,6 +589,11 @@ namespace Beautique.DataAccess.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -439,6 +645,10 @@ namespace Beautique.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator().HasValue("IdentityUser");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -469,12 +679,10 @@ namespace Beautique.DataAccess.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -511,12 +719,10 @@ namespace Beautique.DataAccess.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -524,6 +730,73 @@ namespace Beautique.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Beautique.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreetAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasIndex("CompanyId");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
+            modelBuilder.Entity("Beautique.Models.Company", b =>
+                {
+                    b.HasOne("Beautique.Models.Company", "company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId");
+
+                    b.Navigation("company");
+                });
+
+            modelBuilder.Entity("Beautique.Models.OrderDetail", b =>
+                {
+                    b.HasOne("Beautique.Models.OrderHeader", "OrderHeader")
+                        .WithMany()
+                        .HasForeignKey("OrderHeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Beautique.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrderHeader");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Beautique.Models.OrderHeader", b =>
+                {
+                    b.HasOne("Beautique.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
                 });
 
             modelBuilder.Entity("Beautique.Models.Product", b =>
@@ -535,6 +808,25 @@ namespace Beautique.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Beautique.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("Beautique.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Beautique.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -586,6 +878,15 @@ namespace Beautique.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Beautique.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("Beautique.Models.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId");
+
+                    b.Navigation("Company");
                 });
 #pragma warning restore 612, 618
         }

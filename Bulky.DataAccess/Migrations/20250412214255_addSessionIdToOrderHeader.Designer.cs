@@ -321,7 +321,7 @@ namespace Beautique.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ISBN")
+                    b.Property<string>("BarCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -361,7 +361,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Description = "A premium shampoo that provides ultimate shine and smoothness.",
-                            ISBN = "SW123456789",
+                            BarCode = "SW123456789",
                             ImageUrl = "",
                             ListPrice = 55.0,
                             Maker = "SparkLife",
@@ -375,7 +375,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 2,
                             CategoryId = 2,
                             Description = "A gentle body wash that leaves your skin refreshed and hydrated.",
-                            ISBN = "PG987654321",
+                            BarCode = "PG987654321",
                             ImageUrl = "",
                             ListPrice = 40.0,
                             Maker = "CleanseCo",
@@ -389,7 +389,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 3,
                             CategoryId = 3,
                             Description = "A soft and nourishing facial cream for smooth and glowing skin.",
-                            ISBN = "ST111223344",
+                            BarCode = "ST111223344",
                             ImageUrl = "",
                             ListPrice = 65.0,
                             Maker = "VelvetSkin",
@@ -403,7 +403,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 4,
                             CategoryId = 5,
                             Description = "A refreshing deodorant spray that keeps you fresh all day long.",
-                            ISBN = "CS554433221",
+                            BarCode = "CS554433221",
                             ImageUrl = "",
                             ListPrice = 20.0,
                             Maker = "LushCare",
@@ -417,7 +417,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 5,
                             CategoryId = 6,
                             Description = "A shaving gel that provides a smooth and irritation-free shave.",
-                            ISBN = "FC998877665",
+                            BarCode = "FC998877665",
                             ImageUrl = "",
                             ListPrice = 35.0,
                             Maker = "SharpEdge",
@@ -431,7 +431,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 6,
                             CategoryId = 7,
                             Description = "A long-lasting nail polish with vibrant colors and a glossy finish.",
-                            ISBN = "GN332211445",
+                            BarCode = "GN332211445",
                             ImageUrl = "",
                             ListPrice = 15.0,
                             Maker = "NailArt",
@@ -445,7 +445,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 7,
                             CategoryId = 8,
                             Description = "A fresh and uplifting fragrance that is perfect for daily wear.",
-                            ISBN = "EV776655443",
+                            BarCode = "EV776655443",
                             ImageUrl = "",
                             ListPrice = 50.0,
                             Maker = "ScentAura",
@@ -459,7 +459,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 8,
                             CategoryId = 9,
                             Description = "A hydrating lip balm with a smooth texture and subtle scent.",
-                            ISBN = "SK223344556",
+                            BarCode = "SK223344556",
                             ImageUrl = "",
                             ListPrice = 10.0,
                             Maker = "LipsCare",
@@ -473,7 +473,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 9,
                             CategoryId = 10,
                             Description = "A nourishing hand cream that keeps your skin soft and hydrated.",
-                            ISBN = "HH556677889",
+                            BarCode = "HH556677889",
                             ImageUrl = "",
                             ListPrice = 18.0,
                             Maker = "SkinGuard",
@@ -487,7 +487,7 @@ namespace Beautique.DataAccess.Migrations
                             Id = 10,
                             CategoryId = 12,
                             Description = "A rejuvenating eye cream that targets puffiness and dark circles.",
-                            ISBN = "EL998877665",
+                            BarCode = "EL998877665",
                             ImageUrl = "",
                             ListPrice = 45.0,
                             Maker = "VisionGlow",

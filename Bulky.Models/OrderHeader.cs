@@ -29,7 +29,7 @@ namespace Beautique.Models
         public DateTime PaymentDate { get; set; }
         public DateOnly PaymentDueDate { get; set; }
 
-        public string? SessionId {  get; set; }
+        public string? SessionId { get; set; }
         public string? PaymentIntentId { get; set; }
 
         [Required]
@@ -44,6 +44,6 @@ namespace Beautique.Models
         public string PostalCode { get; set; }
         [Required]
         public string Name { get; set; }
- 
+
     }
 }

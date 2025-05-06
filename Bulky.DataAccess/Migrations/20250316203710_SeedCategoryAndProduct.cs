@@ -34,7 +34,7 @@ namespace Beautique.DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BarCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Maker = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ListPrice = table.Column<double>(type: "float", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
@@ -77,7 +77,7 @@ namespace Beautique.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Description", "ISBN", "ImageUrl", "ListPrice", "Maker", "Price", "Price100", "Price50", "Title" },
+                columns: new[] { "Id", "CategoryId", "Description", "BarCode", "ImageUrl", "ListPrice", "Maker", "Price", "Price100", "Price50", "Title" },
                 values: new object[,]
                 {
                     { 1, 1, "A premium shampoo that provides ultimate shine and smoothness.", "SW123456789", "", 55.0, "SparkLife", 50.0, 40.0, 45.0, "ShineWave" },
