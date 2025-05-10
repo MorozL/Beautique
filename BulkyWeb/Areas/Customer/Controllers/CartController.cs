@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol;
 using Stripe.Checkout;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Identity.UI.Services;
 
 
 namespace BeautiqueWeb.Areas.Customer.Controllers
@@ -17,13 +16,11 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IEmailSender _emailSender;
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
-        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender)
+        public CartController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _emailSender = emailSender;
         }
         public IActionResult Index()
         {
@@ -181,10 +178,8 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
                     _unitOfWork.OrderHeader.UpdateStatus(id, SD.StatusApproved, SD.PaymentStatusApproved);
                     _unitOfWork.Save();
                 }
-                HttpContext.Session.Clear();
-
             }
-            _emailSender.SendEmailAsync(orderHeader.ApplicationUser.Email, "New Order - Beatique", "$<p>New order has been created - {orderHeader.Id} </p>");
+
             List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
             _unitOfWork.ShoppingCart.RemoveRange(shoppingCarts);
             _unitOfWork.Save();
@@ -203,10 +198,9 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
         }
         public IActionResult Minus(int cartId)
         {
-            var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId, tracked: true);
+            var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId);
             if (cartFromDb.Count <= 0)
             {
-                HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cartFromDb.ApplicationUserId).Count() - 1);
                 _unitOfWork.ShoppingCart.Remove(cartFromDb);
             }
             else
@@ -219,8 +213,7 @@ namespace BeautiqueWeb.Areas.Customer.Controllers
         }
         public IActionResult Remove(int cartId)
         {
-            var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId, tracked:true);
-            HttpContext.Session.SetInt32(SD.SessionCart, _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == cartFromDb.ApplicationUserId).Count()-1);
+            var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.Id == cartId);
             _unitOfWork.ShoppingCart.Remove(cartFromDb);
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));

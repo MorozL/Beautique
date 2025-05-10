@@ -14,7 +14,6 @@ using Stripe.Checkout;
 namespace BeautiqueWeb.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize]
     public class OrderController : Controller
     {
 
