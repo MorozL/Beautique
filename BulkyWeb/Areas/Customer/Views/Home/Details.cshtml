@@ -23,25 +23,32 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
+                    <div class="col-12 col-lg-3 offset-lg-1 mb-3">
                         <img src="@Model.Product.ImageUrl" width="100%" class="rounded" />
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
 
-                        <div class="col-12 col-md-6 pb-4">
-                            <h2 class="badge text-secondary text-uppercase">@Model.Product.Category.Name</h2>
-                        </div>
-                        <div class="row ps-2">
-                            <h6 class="text-secondary text-opacity-50 ">BarCode : @Model.Product.BarCode</h6>
-                        </div>
-                        <div class="row ps-2">
-                            <h6 class="text-secondary text-opacity-50  pb-2">
-                                List Price:
-                                <span class="text-decoration-line-through">
+                        <div class="p-2 text-start">
+                            <!-- Категорія -->
+                            <div class="mb-2">
+                                <span class=" fw-bold bg-secondary text-uppercase text-secondary">@Model.Product.Category.Name</span>
+                            </div>
+
+                            <!-- Штрихкод -->
+                            <div class="mb-2">
+                                <h6 class="text-secondary text-opacity-50 mb-0">BarCode:</h6>
+                                <p class="text-dark mb-0">@Model.Product.BarCode</p>
+                            </div>
+
+                            <!-- Ціна -->
+                            <div>
+                                <h6 class="text-secondary text-opacity-50 mb-1">List Price:</h6>
+                                <span class="text-decoration-line-through text-dark">
                                     @Model.Product.ListPrice.ToString("c")
                                 </span>
-                            </h6>
+                            </div>
                         </div>
+
                         <div class="col-10 rounded overflow-hidden border" style="border-radius: 12px;">
                             <div class="row text-center ps-2 bg-white border-bottom">
                                 <div class="p-1 col-3 col-lg-2">
@@ -74,7 +81,7 @@
                         </div>
 
                         <div class="row pl-2 my-3">
-                            <p class="text-secondary lh-sm">@Html.Raw(Model.Product.Description)</p>
+                            <p class="text-secondary text-start lh-sm">@Html.Raw(Model.Product.Description)</p>
                         </div>
                         <div class="row pl-2 mb-3">
                             <div class="col-md-4">

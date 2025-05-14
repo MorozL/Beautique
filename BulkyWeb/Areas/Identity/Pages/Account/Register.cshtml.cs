@@ -163,7 +163,14 @@ namespace Beautique.Areas.Identity.Pages.Account
                         await _userManager.AddToRoleAsync(user, SD.Role_Customer);
                     }
 
-                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    if (User.IsInRole(SD.Role_Admin))
+                    {
+                        TempData["success"] = "New User Created Successfully";
+                    }
+                    else
+                    {
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                    }
                     return LocalRedirect(returnUrl);
                 }
 
