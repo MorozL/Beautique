@@ -102,6 +102,10 @@
                                         class="btn btn-primary w-100 py-2 text-uppercase fw-semibold">
                                     Add to Cart
                                 </button>
+                                <a asp-area="Customer" asp-controller="Review" asp-action="ProductReviews" asp-route-productId="@Model.Product.Id" class="btn btn-outline-primary">
+                                    Add Reviews
+                                </a>
+
                             </div>
                         </div>
                     </div>

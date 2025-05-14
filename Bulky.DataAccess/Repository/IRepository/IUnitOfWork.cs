@@ -15,6 +15,7 @@ namespace Beautique.DataAccess.Repository.IRepository
         IApplicationUserRepository ApplicationUser { get; }
         IOrderDetailRepository OrderDetail { get; }
         IOrderHeaderRepository OrderHeader { get; }
+        IReviewRepository Review { get; }
         void Save();
     }
 }
